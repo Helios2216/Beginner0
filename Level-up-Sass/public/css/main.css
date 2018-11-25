@@ -1,0 +1,88 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+}
+
+body #bg {
+  -webkit-clip-path: polygon(100% 0, 100% 44%, 0 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 44%, 0 100%, 0 100%, 0 0);
+  background-color: #005dff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+body header a {
+  font-family: 'Black Ops One', cursive;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main h3 {
+  color: #ffffff;
+  text-align: center;
+}
+
+main section#card {
+  background-color: white;
+  padding: 0.83rem;
+  border-radius: 1em;
+}
+
+main ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main li {
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+main section#guide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section#guide a {
+  color: white;
+  text-decoration: none;
+  background-color: #ff8800;
+  border-radius: 1em;
+  padding: 0.7rem;
+}
+/*# sourceMappingURL=main.css.map */
