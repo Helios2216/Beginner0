@@ -14,3 +14,10 @@ const fizzBuzz = num => {
 // console.log(fizzBuzz(3));
 // console.log(fizzBuzz(15));
 // console.log(fizzBuzz(1));
+
+// I had this weird idea I wanted to try, I couldn't figure out the bitwise version yet(~ 100 on binary). I didn't add string: none because I didn't want to nest tenary: (~ a good look). I can't wait to try (~) as not instead of !().
+const fizzBuzz2 = num => `${num % 3 === 0 ? 'fizz' : ''}${num % 5 === 0 ? 'buzz' : ''}`;
+
+console.log(fizzBuzz2(3));
+console.log(fizzBuzz2(5));
+console.log(fizzBuzz2(15));

@@ -1,0 +1,22 @@
+// table[class etc] old way due to Yahoo. can just .selector or #selector : id's not supported globally;
+body {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+	table[class ='responsive-table'] {
+		width: 100% !important;
+	}
+	img[class='responsive-image'] {
+		max-width: 100% !important;
+		width: 100% !important;
+		height: auto !important;
+	}
+	td[class='headline'] {
+		font-size: 36px !important;
+		background-color: #222;
+		color: white;
+	}
+}
