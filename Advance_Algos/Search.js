@@ -7,7 +7,7 @@ let arr = [5, 8, 1, 100, 12, 3, 12];
 const myLinearSearch = (arr, value) => {
 	let lengthCount = 0;
 
-	for (element of arr) {
+	for (let element of arr) {
 		lengthCount++;
 		if (element === value) return lengthCount - 1;
 	}
