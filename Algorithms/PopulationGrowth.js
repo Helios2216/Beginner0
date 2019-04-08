@@ -8,7 +8,7 @@ const populationGrowth = (currentPopulation, percentAugmenter, migration, evalGr
 	// while the current population is less than the target increment the years, if it is equal
 	// or over the population target return the years it took to reach that point.
 
-	let growthPercent = percentAugmenter / 100;
+	const growthPercent = percentAugmenter / 100;
 
 	while (currentPopulation < evalGrowth) {
 		++number_of_years;

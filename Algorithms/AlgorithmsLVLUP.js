@@ -9,6 +9,7 @@ function reverseString(str) {
 }
 //reverseString('hello'); Complete
 
+//--------------------------------------
 function isPalindrome(str) {
 	let strEnd = str.length - 1;
 	if (str.length === 0) return false;
@@ -21,6 +22,7 @@ function isPalindrome(str) {
 
 //console.log(isPalindrome('racecar')) //complete;
 
+//--------------------------------------
 function reverseInt(int) {
 	let stringNum = '' + int;
 	const consolelog = reverseString(stringNum);
@@ -29,6 +31,7 @@ function reverseInt(int) {
 
 //reverseInt(521)
 
+//--------------------------------------
 function removeNumFromString(word) {
 	let newWord = word.replace(/\d/g, '');
 	console.log(newWord);
@@ -52,6 +55,7 @@ const removeFromString = word => {
 
 removeFromString('abc123def456ghi');
 
+//--------------------------------------
 //Solved on my own: figure out what I was missing!!!!
 findBigNum = (arr, biggest = 0) => {
 	console.log('initial Biggest:', biggest, arr);
@@ -68,3 +72,70 @@ findBigNum = (arr, biggest = 0) => {
 };
 
 console.log(findBigNum([17, [43, 83], 23, [62, 90], 82]));
+
+//--------------------------------------
+const factorial = num => {
+	let total = 1;
+
+	for (let i = 1; i <= num; i++) {
+		total *= i;
+	}
+
+	return total;
+};
+
+console.log(factorial(5));
+
+//--------------------------------------
+
+// No instructions regarding if lengths equal
+const findLongestWord = word => {
+	let answer;
+	let lengthCheck = 0;
+	let newWord = word.split(' ');
+	console.log(newWord);
+	newWord.forEach(el => {
+		if (lengthCheck < el.length) {
+			lengthCheck = el.length;
+			answer = el;
+		}
+	});
+	console.log(answer);
+	return answer;
+};
+
+findLongestWord("Ain't no fun if the homies don't code none");
+
+//--------------------------------------
+const capFirstWord = sentence => {
+	if (sentence.length === 0) return;
+	let newSentence = sentence.split(' ');
+	let word;
+
+	word = newSentence.map(el => {
+		let elEnd = el.length;
+
+		return (el = el[0].slice().toUpperCase() + el.slice(1, elEnd));
+	});
+
+	console.log(word);
+};
+
+capFirstWord('We are we are we are');
+capFirstWord('');
+//--------------------------------------
+const repeater = (string, num) => {
+	return string.repeat(num);
+};
+
+console.log(repeater('test', 5));
+//--------------------------------------
+const isDigit = string => {
+	if (string.length === 0) return false;
+	const stringTest = /\D/g;
+
+	if (stringTest.test(string) === true) return false;
+	else return true;
+};
+
+console.log(isDigit('1'), isDigit('d'), isDigit(''), isDigit('fefe5'), isDigit('15255'), isDigit(548));
