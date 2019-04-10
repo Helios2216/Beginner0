@@ -1,0 +1,62 @@
+{
+    "$type": "Game.GameData.EquippableGameData, Assembly-CSharp",
+    "DebugName": "Mod_Obsidian_Order",
+    "ID": "da588b7e-77c9-4b1b-a898-efd1d935a9ea",
+    "Components": [
+        {
+            "$type": "Game.GameData.ItemComponent, Assembly-CSharp",
+            "DisplayName": 5337,
+            "DescriptionText": 5311,
+            "DescriptionTextTactical": -1,
+            "FilterType": "Clothing",
+            "InventoryAudioEventListID": "fb712b7c-32bf-4e9c-b5bd-595abd18298e",
+            "IsQuestItem": "false",
+            "IsIngredient": "false",
+            "IsCurrency": "false",
+            "IsAdventuringItem": "false",
+            "IsJunk": "false",
+            "CanSellForFullValue": "false",
+            "MaxStackSize": 10,
+            "NeverDropAsLoot": "false",
+            "CanBePickpocketed": "false",
+            "IsUnique": "true",
+            "Value": 5000000,
+            "IconTextureSmall": "gui/icons/items/neck/cloak_obsidian_order_s.png",
+            "IconTextureLarge": "gui/icons/items/neck/cloak_obsidian_order_l.png",
+            "PencilSketchTexture": "",
+            "InspectOnUseButton": [],
+            "IsPlaceholder": "false"
+        },
+        {
+            "$type": "Game.GameData.EquippableComponent, Assembly-CSharp",
+            "EquipmentType": "None",
+            "EquipmentSlot": "Cape",
+            "AppearancePiece": {
+                "ModelVisualDataPath": "prefabs/items/appearance/cape/a_hum_cape01_v32.asset"
+            },
+            "ItemModsIDs": [
+                "abfd9a79-aedc-44eb-be13-1298e65fb378", 
+                "6438ab2e-4d5f-425e-b904-b76798c2a45a",
+                "68f1cf7e-0b98-4106-8dfe-3f285edc538c"
+                ,"01c76e6c-1fad-4b42-9a46-e53f0a27f89d",
+                "d765c78b-415c-44bd-be3f-af357bcc49f0"
+            ],
+            "OnEquipVisualEffects": [],
+            "RestrictedToClassIDs": [],
+            "RestrictedToPlayer": "false",
+            "EquipConditionals": {
+                "Operator": 0,
+                "Components": []
+            },
+            "ProficientAbilityID": "00000000-0000-0000-0000-000000000000",
+            "CannotUnequip": "false",
+            "ItemRendererPrefab": "",
+            "ItemModel": "",
+            "AnimationController": "",
+            "PaperdollOverrideRenderer": "",
+            "AttackSummonID": "00000000-0000-0000-0000-000000000000",
+            "CannotSheathe": "false",
+            "PropVisualEffects": []
+        }
+    ]
+}

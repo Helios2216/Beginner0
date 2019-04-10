@@ -1,0 +1,22 @@
+{
+    "GameDataObjects": [
+        {
+            "$type": "Game.GameData.PromotionalItemCollectionGameData, Assembly-CSharp",
+            "DebugName": "mod_promo_fig_cloak",
+            "ID": "876507cc-a224-4052-a5e8-14ac81792aa5",
+            "Components": [
+                {
+                    "$type": "Game.GameData.PromotionalItemCollectionComponent, Assembly-CSharp",
+                    "PromotionalItemCollections": {
+                        "PromotionalItemCollection": [
+                            {
+                                "ItemReferenceID": "da588b7e-77c9-4b1b-a898-efd1d935a9ea",
+                                "Quantity": 10
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

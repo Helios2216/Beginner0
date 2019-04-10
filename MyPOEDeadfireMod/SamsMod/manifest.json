@@ -1,0 +1,14 @@
+{
+	"Title": {
+		"en": "Per-Rest Resources"
+	},
+	"Description": {
+		"en": "Custom cloak: grants death runes, mind over matter, anatomist, and one extra enchantment"
+	},
+	"Author": "Sam",
+	"ModVersion": "1.0",
+	"SupportedGameVersion": {
+		"Min": "1.1.0",
+		"Max": "1.2.0"
+	}
+}
