@@ -1,4 +1,7 @@
-{
+{ 
+
+"GameDataObjects": [
+    {
     "$type": "Game.GameData.EquippableGameData, Assembly-CSharp",
     "DebugName": "Mod_Obsidian_Order",
     "ID": "da588b7e-77c9-4b1b-a898-efd1d935a9ea",
@@ -57,6 +60,9 @@
             "AttackSummonID": "00000000-0000-0000-0000-000000000000",
             "CannotSheathe": "false",
             "PropVisualEffects": []
-        }
+         }
+        ]
+    }
     ]
+    
 }

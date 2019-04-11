@@ -1,6 +1,6 @@
 {
 	"Title": {
-		"en": "Per-Rest Resources"
+		"en": "New Cloak"
 	},
 	"Description": {
 		"en": "Custom cloak: grants death runes, mind over matter, anatomist, and one extra enchantment"
@@ -9,6 +9,6 @@
 	"ModVersion": "1.0",
 	"SupportedGameVersion": {
 		"Min": "1.1.0",
-		"Max": "1.2.0"
+		"Max": "4.1.0"
 	}
 }
