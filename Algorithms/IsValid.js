@@ -13,3 +13,15 @@ function isValid(string) {
 console.log(isValid('22:00'));
 console.log(isValid('24:00'));
 console.log(isValid('Tito'));
+
+// Course solution below for ref
+
+function isValidTime(time) {
+	let timeArray = time.split(':');
+
+	if (Number(timeArray[0]) > 23) return false;
+	else if (Number(timeArray[1]) > 59) return false;
+
+	// Valid inputs assumed
+	return true;
+}
