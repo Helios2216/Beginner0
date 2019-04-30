@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="sideswipe.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="page1" id="page-one" 
+    ontouchstart="handleSwipeStart(event)"
+    ontouchmove="handleSwipeMove(event)"
+    ontouchend="handleSwipeEnd(event)">
+        <h1 class="center">Page One</h1>
+    </div>
+
+
+    <div class="page2" id="page-two"  
+    ontouchstart="p2handleSwipeStart(event)"
+    ontouchmove="p2handleSwipeMove(event)"
+    ontouchend="p2handleSwipeEnd(event)">
+        <h1 class="center">Page Two</h1>
+</div>
+    
+</body>
+<script src="sideswipe.js"></script>
+</html>
