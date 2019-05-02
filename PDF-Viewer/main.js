@@ -73,13 +73,25 @@ const showNextPage = () => {
 };
 
 //Get Document
-pdfjsLib.getDocument(url).promise.then(pdfFile => {
-	pdfDoc = pdfFile;
+pdfjsLib
+	.getDocument(url)
+	.promise.then(pdfFile => {
+		pdfDoc = pdfFile;
 
-	document.querySelector('#page-count').textContent = pdfDoc.numPages;
+		document.querySelector('#page-count').textContent = pdfDoc.numPages;
 
-	renderPage(pageNum);
-});
+		renderPage(pageNum);
+	})
+	.catch(err => {
+		//Display error
+		const div = document.createElement('div');
+		div.className = 'error';
+		div.appendChild(document.createTextNode(err.message));
+		document.querySelector('body').insertBefore(div, canvas);
+
+		//Remove top bar
+		document.querySelector('.top-bar').style.display = 'none';
+	});
 
 // Button Events
 
