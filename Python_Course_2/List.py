@@ -24,3 +24,11 @@ new_list.append('first')
 new_list.append('second')
 new_list.append('last')
 print('\n', new_list)
+
+# String split to create list item
+
+line = 'Split this line'
+
+line_split = line.split()  # ['Split', 'this', 'line']
+# multiple spaces treated as on delimiter: similar to js
+print(line_split)

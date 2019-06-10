@@ -3,7 +3,7 @@
 # i.e file_handle = open('blah.txt', 'r')
 import os
 
-file = 'Beginner0/Python_Course_2/Lorem_Test.txt'
+file = 'Python_Course_2/Lorem_Test.txt'
 dir_path = os.path.realpath(file)
 file_handle = open(dir_path, 'r')
 
