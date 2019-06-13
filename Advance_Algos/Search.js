@@ -14,3 +14,14 @@ const myLinearSearch = (arr, value) => {
 
 	return -1;
 };
+
+//Refactored
+const myLinearSearchRefact = (arr, value) => {
+	for (let element of arr.keys()) {
+		if (arr[element] === value) return element;
+	}
+
+	return -1;
+};
+
+console.log(myLinearSearchRefact(arr, 100));

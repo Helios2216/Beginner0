@@ -1,0 +1,161 @@
+$border-style: 1px solid rgba(0, 0, 0, 0.24);
+$brand-color-main: #525052;
+$brand-color: #1761a0;
+
+body,
+html {
+	box-sizing: border-box;
+	font-family: 'Roboto Slab', serif;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+header {
+	hr {
+		margin-top: 0;
+	}
+}
+
+#brand-container {
+	background-color: #262228;
+
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	a {
+		color: white;
+		text-decoration: none;
+	}
+	div {
+		font-size: 0.6rem;
+	}
+	#new-brand {
+		display: flex;
+		font-size: 0.9rem;
+		color: #efb300;
+		span {
+			color: $brand-color;
+			margin-left: 0.3rem;
+		}
+	}
+	@media (min-width: 768px) {
+		#new-brand {
+			font-size: 2rem;
+		}
+		div {
+			font-size: 1rem;
+		}
+	}
+}
+#helios2216 {
+	hr {
+		width: 75vw;
+	}
+}
+.duh-me {
+	margin: 5vw;
+	widows: 75px;
+	max-width: 75vw;
+	word-break: break-all;
+	hr {
+		width: 100vw;
+	}
+}
+
+.form-h2 {
+	font-weight: 300;
+	text-align: center;
+}
+#input-div {
+	display: flex;
+	margin-bottom: 0.6rem;
+	flex-direction: column;
+
+	div {
+		padding: 0.5em;
+	}
+	input {
+		border-radius: 0.4em;
+		border: $border-style;
+		height: 2em;
+		outline: 0;
+	}
+	@media (min-width: 400px) {
+		flex-direction: row;
+	}
+}
+
+.input-margin {
+	margin-top: 0.42rem;
+}
+
+#u-message {
+	width: 100%;
+	border: $border-style;
+	border-radius: 0.2em;
+	overflow: hidden;
+	overflow-y: scroll;
+	resize: none;
+	margin-bottom: 1.5rem;
+	max-height: 12%;
+	@media (max-width: 375px) {
+		max-width: 85%;
+	}
+}
+
+.btn {
+	border: $border-style;
+	border-radius: 0.3em;
+	font-size: 1.3rem;
+}
+.btn-medium {
+	padding: 0.5rem 1.5rem;
+}
+
+.btn-style-ini {
+	background: transparent;
+	font-family: inherit;
+	margin: 5px;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn-pop-up {
+	&:focus {
+		box-shadow: 1px 1px 0.2em black;
+	}
+}
+
+.btn-reset {
+	&:focus {
+		animation-name: pop;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		@keyframes pop {
+			from {
+				box-shadow: 0 0 0.9em black;
+			}
+			to {
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+.section-divs {
+	display: flex;
+	justify-content: center;
+}
+
+.centered-divs {
+	padding: 4px;
+	text-align: center;
+}
+
+.label-layout {
+	display: flex;
+	flex-direction: column;
+}
