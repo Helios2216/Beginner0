@@ -1,12 +1,24 @@
+// Container
+.container {
+	max-width: var(--max-width);
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2em;
+	margin-top: 6em;
+}
+
 // Text styles
 .x-large {
 	@include text-style(4rem,1.2,1em);
 }
 .large {
-	@include text-style(3rem,1.2,1em);
+	@include text-style(3rem,1.2,0.6em);
 }
 .lead {
 	@include text-style(1.5rem,inherit,1em);
+}
+.text-primary {
+	color: var(--primary);
 }
 
 // Backgrounds
