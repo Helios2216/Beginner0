@@ -45,3 +45,14 @@
 		text-align: center;
 	}
 }
+
+// Profile Page
+.profile {
+	display: grid;
+	grid-template-columns: 2fr 4fr 2fr;
+	align-items: center;
+	grid-gap: 2em;
+	padding: 1em;
+	line-height: 1.8;
+	margin-bottom: 1em;
+}
