@@ -46,7 +46,7 @@
 	}
 }
 
-// Profile Page
+// Profiles Page
 .profile {
 	display: grid;
 	grid-template-columns: 2fr 4fr 2fr;
@@ -55,4 +55,72 @@
 	padding: 1em;
 	line-height: 1.8;
 	margin-bottom: 1em;
+}
+
+// Profile Page
+.profile-grid {
+	display: grid;
+	grid-template-areas: 'top top' 'about about' 'exp edu' 'github github';
+	grid-gap: 1em;
+
+	.profile-top {
+		grid-area: top;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		img {
+			width: 15.5em;
+		}
+		icons a {
+			margin: 0 0.3em;
+
+			&:hover {
+				color: var(--orange);
+			}
+		}
+	}
+	.profile-about {
+		grid-area: about;
+		text-align: center;
+		.skills {
+			@include flex-layout;
+
+			i {
+				margin-right: 0.5em;
+			}
+		}
+	}
+	.profile-exp {
+		grid-area: exp;
+	}
+	.profile-edu {
+		grid-area: edu;
+	}
+	.profile-exp,
+	.profile-edu {
+		& > div {
+			margin-bottom: 1em;
+			padding-bottom: 1em;
+			border-bottom: 1px dotted #ccc;
+			&:last-child {
+				border: none;
+			}
+		}
+		p {
+			margin: 0.5em 0;
+		}
+	}
+	.profile-github {
+		grid-area: github;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		div > ul {
+			width: 50%;
+			margin: auto;
+		}
+	}
 }
