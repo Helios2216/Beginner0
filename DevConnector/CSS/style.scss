@@ -124,3 +124,26 @@
 		}
 	}
 }
+
+// Post Page
+.post-form-header {
+	padding: 0.5em;
+}
+
+.post {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-gap: 2rem;
+	align-items: center;
+	padding: 1em;
+	& > div:first-child {
+		text-align: center;
+	}
+	&.post-block {
+		border: 1px solid #ccc;
+		padding: 0.2em;
+	}
+	img {
+		width: 150px;
+	}
+}

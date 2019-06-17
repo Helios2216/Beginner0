@@ -97,6 +97,11 @@
 			color: var(--white);
 		}
 	}
+	&.btn-red {
+		@include set-background($light) &:hover {
+			background: darken($danger, 5%);
+		}
+	}
 	&:hover {
 		background: darken($light, 20%);
 		color: var(--white);
@@ -154,4 +159,16 @@
 	top: 0;
 	left: 0;
 	background-color: rgba($color: #020202, $alpha: 0.8);
+}
+
+// Tables
+.table {
+	th,
+	td {
+		padding: 1em;
+		text-align: left;
+	}
+	th {
+		background: var(--light);
+	}
 }
