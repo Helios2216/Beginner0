@@ -62,7 +62,7 @@ main {
 		flex-wrap: wrap;
 		flex-direction: column;
 		a {
-			color: darken($color: $accent, $amount: 50%);
+			// color: darken($color: $accent, $amount: 50%);
 			text-decoration: none;
 			background-color: rgb(255, 136, 0);
 			border-radius: 1em;
