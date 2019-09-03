@@ -20,4 +20,18 @@
 
 .brand-dropdown {
 	display: none;
+	color: #000;
+	border-radius: 2px;
+	position: absolute;
+	top: 4.9rem;
+	padding: 10px;
+	z-index: 10;
+}
+.brand-user-account:hover {
+	position: relative;
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
 }
