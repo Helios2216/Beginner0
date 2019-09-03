@@ -1,0 +1,23 @@
+.brand-wrapper {
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
+	padding: 2em;
+}
+
+.brand-links {
+	order: 3;
+}
+.brand-links-btns {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: .5em;
+}
+
+.brand-links a {
+	color: inherit;
+}
+
+.brand-dropdown {
+	display: none;
+}
