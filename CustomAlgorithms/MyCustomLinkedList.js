@@ -1,4 +1,4 @@
-// I am adding of custom functionality to the linked list
+// I am adding custom functionality to the linked list
 // As a visual learner I like to see : (clg) the internal of elements
 
 function Node(data) {
