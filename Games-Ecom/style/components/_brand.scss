@@ -1,11 +1,23 @@
 .brand-wrapper {
 	display: grid;
-	grid-template-columns: 2fr 1fr 2fr;
+	background-color: #303030;
+	grid-template-columns: 3fr 1fr 1fr 1fr;
 	padding: 2em;
 }
+.brand {
+	grid-column: 1/3;
+}
 
+.brand-links,
+.brand-links-authed {
+	align-self: center;
+	font-size: 1.3rem;
+}
 .brand-links {
-	order: 3;
+	grid-column: 4/5;
+}
+.brand-links-authed {
+	grid-column: 3/5;
 }
 .brand-links-btns {
 	display: flex;
@@ -16,6 +28,20 @@
 
 .brand-links a {
 	color: inherit;
+}
+
+.brand-links-menu {
+	@media (min-width: 600px) {
+		display: none;
+	}
+}
+.brand-links-login,
+.brand-links-login-icon {
+	display: none;
+
+	@media (min-width: 600px) {
+		display: inline-block;
+	}
 }
 
 .brand-dropdown {
