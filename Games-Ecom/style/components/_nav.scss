@@ -1,8 +1,26 @@
 .nav-wrapper {
+	display: flex;
 	background-color: #292929;
+	justify-content: center;
+	align-items: center;
+	padding: 1.2em 1.5em;
+
+	@media (min-width: 768px) {
+		justify-content: space-between;
+	}
 }
 
 .nav-container {
-	text-transform: uppercase;
-	display: flex;
+	display: none;
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: space-around;
+		text-transform: uppercase;
+		white-space: nowrap;
+		flex: 1;
+	}
+}
+.nav-search {
+	flex: .5;
+	position: relative;
 }

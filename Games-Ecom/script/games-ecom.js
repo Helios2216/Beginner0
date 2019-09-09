@@ -1,3 +1,5 @@
+// For manual testing before React
+
 const menuTarget = document.querySelector('.menu-target');
 const menuTarget01 = document.querySelector('.menu-target-1');
 const menu = document.querySelector('.menu');

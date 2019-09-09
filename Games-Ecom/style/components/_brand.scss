@@ -6,6 +6,7 @@
 }
 .brand {
 	grid-column: 1/3;
+	white-space: nowrap;
 }
 
 .brand-links,
@@ -32,6 +33,7 @@
 
 .brand-links-menu {
 	padding: .5em;
+
 	@media (min-width: 768px) {
 		display: none;
 	}

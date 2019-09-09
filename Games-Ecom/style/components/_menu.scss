@@ -7,7 +7,8 @@
 	z-index: 100;
 	position: fixed;
 	right: 0;
-	//transform: translateX(20em);
+	transform: translateX(20em);
+	transition: transform ease-in-out 900ms;
 }
 .menu-inner-wrapper {
 	display: flex;
@@ -32,4 +33,9 @@
 }
 .menu-grid-item-dm {
 	padding-right: 14em;
+}
+
+.menu-target,
+.menu-target-1 {
+	cursor: pointer;
 }
