@@ -1,5 +1,6 @@
 .menu {
 	display: flex;
+	font-size: .89rem;
 	flex-direction: column;
 	background-color: #353535;
 	height: 100vh;
@@ -18,7 +19,7 @@
 
 .menu-container-3 {
 	display: grid;
-	grid-template-columns: 3fr 12fr 2fr;
+	grid-template-columns: 3fr 10fr 2fr;
 	justify-content: space-around;
 }
 
