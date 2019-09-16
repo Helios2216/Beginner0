@@ -8,8 +8,7 @@
 	z-index: 100;
 	position: fixed;
 	right: 0;
-	//transform: translateX(20em);
-	transform: translateX(0);
+	transform: translateX(20em);
 	transition: transform ease-in-out 900ms;
 }
 .menu-inner-wrapper {
@@ -32,6 +31,7 @@
 
 .menu-grid-item {
 	padding: 0.9em .7em;
+	width: 100%;
 }
 .menu-grid-item-dm {
 	padding-right: 14em;
@@ -40,4 +40,13 @@
 .menu-target,
 .menu-target-1 {
 	cursor: pointer;
+}
+
+.chevron-right {
+	cursor: pointer;
+}
+
+.chevron-right-down {
+	transition: transform ease;
+	transform: rotate(90);
 }

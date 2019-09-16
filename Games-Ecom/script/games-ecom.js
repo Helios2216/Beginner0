@@ -14,3 +14,30 @@ menuTarget01.addEventListener('click', () => {
 
 	menu.style.transform = `translate(0)`;
 });
+
+const openDropdown = (selector) => {
+	/* 
+	Note: train of thought:
+	 Add chervon right down to child node 
+	 don't select childnode using html
+	 just queryselect
+
+	 add indicator on parent
+	 remove both indicator and child class 
+
+	 not best solution - this is template for react app
+
+	 -- stopping point -- 9/15/2019
+	
+	*/
+	console.log(selector.classList, typeof selector.classList.value, selector.childNodes);
+	let check = selector.classList.value.split(' ');
+
+	console.log(check.includes('chevron-right-down'));
+
+	if (check.includes('chevron-right-down')) {
+		selector.classList.remove('chevron-right-down');
+	} else {
+		selector.classList.add('chevron-right-down');
+	}
+};
