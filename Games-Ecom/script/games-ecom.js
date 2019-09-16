@@ -10,34 +10,31 @@ menuTarget.addEventListener('click', () => {
 	menu.style.transform = `translate(20em)`;
 });
 menuTarget01.addEventListener('click', () => {
-	console.log('clicked');
-
 	menu.style.transform = `translate(0)`;
 });
 
-const openDropdown = (selector) => {
+const splitClassList = (selector) => {
+	return selector.classList.value.split(' ');
+};
+
+const openDropdown = () => {
 	/* 
-	Note: train of thought:
-	 Add chervon right down to child node 
-	 don't select childnode using html
-	 just queryselect
+	working but needs to be dynamic
 
-	 add indicator on parent
-	 remove both indicator and child class 
-
-	 not best solution - this is template for react app
-
-	 -- stopping point -- 9/15/2019
-	
+	could wrap vars inside function: store = split(doc.q(etc))
+	but I like following the logic
 	*/
-	console.log(selector.classList, typeof selector.classList.value, selector.childNodes);
-	let check = selector.classList.value.split(' ');
 
-	console.log(check.includes('chevron-right-down'));
+	const store = document.querySelector('.store');
+
+	const selector = document.querySelector('.chevron-right');
+	let check = splitClassList(selector);
 
 	if (check.includes('chevron-right-down')) {
 		selector.classList.remove('chevron-right-down');
+		store.classList.add('menu-grid-dropdown-hidden');
 	} else {
 		selector.classList.add('chevron-right-down');
+		store.classList.remove('menu-grid-dropdown-hidden');
 	}
 };
