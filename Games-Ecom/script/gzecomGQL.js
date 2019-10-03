@@ -11,7 +11,7 @@ type GAMES {
     title:String!
     price: Float!
     image: String!
-    platforms: [ICON!]
+    platforms: [ICON!]!
 }
 
 type ICON {
@@ -24,7 +24,7 @@ type USER {
     name: String!
     email: String!
     wallet: Float!
-    wishList: [GAMES]
+    wishList: [GAMES]!
     
 }
 `;
