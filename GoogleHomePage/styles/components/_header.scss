@@ -1,0 +1,18 @@
+.header {
+	display: flex;
+	justify-content: flex-end;
+	font-size: .8rem;
+	height: 200px;
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.header-nav {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 15px;
+	padding-top: .9em;
+}
