@@ -1,0 +1,12 @@
+.btn {
+	cursor: pointer;
+	padding: .5em 1.5em;
+	border-radius: 20px;
+	border: 1px solid lightgray;
+	outline: transparent;
+
+	&-play {
+		background-color: rgb(162, 0, 255);
+		color: white;
+	}
+}
