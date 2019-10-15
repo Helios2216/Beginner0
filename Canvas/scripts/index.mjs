@@ -2,7 +2,7 @@ import Circle from './ClassCircle.mjs';
 import { FNCircle as FNC } from './CourseFnCircle.mjs';
 import init, { shape, canvas, ctx, play } from './properties.mjs';
 
-init();
+init(); /* I created this function before course, only to find out that the course instructor and I thought of the same name XD. However, he puts his init in the event listener and it's more complex */
 
 const test = () => {
 	shape.innerText = `width: ${canvas.width} height: ${canvas.height}`;
@@ -18,10 +18,17 @@ const test = () => {
 	// const miniFNC = new FNC(100, 200, 50, dx, dy);
 	// const originalCircle = new FNC(x, y, radius, dx, dy);
 
+	const mouse = {
+		x: undefined,
+		y: undefined
+	};
+
+	const colorArray = [ '#067652', '#50768b', '#b52eeb', '#21c7d6', '#745fda', '#6bdb7a', '#b22616' ];
+
 	const circleArray = [];
 
-	for (let i = 0; i < 10; i++) {
-		const radius = 10;
+	for (let i = 0; i < 25; i++) {
+		const radius = Math.random() * 40 + 50;
 		const diameter = radius * 2;
 		const dw = innerWidth - diameter;
 		const dh = innerHeight * 0.45 - diameter;
@@ -30,7 +37,9 @@ const test = () => {
 		let dx = (Math.random() - 0.5) * 10;
 		let dy = (Math.random() - 0.5) * 12;
 
-		circleArray.push(new FNC(x, y, radius, dx, dy));
+		circleArray.push(new FNC(colorArray, null, x, y, radius, dx, dy));
+
+		circleArray.push(new Circle(colorArray, false, x, y, radius, dx, dy));
 	}
 
 	/* Mixed version, a bit from course and my version */
@@ -46,11 +55,17 @@ const test = () => {
 		// miniCircle.update();
 		// miniFNC.draw();
 
-		for (let element of circleArray) {
-			element.draw('blue');
-		}
+		circleArray.forEach((element) => {
+			element.draw(mouse.x, mouse.y);
+		});
+
 		count++;
 	};
+
+	window.addEventListener('mousemove', (event) => {
+		mouse.x = event.x;
+		mouse.y = event.y;
+	});
 	return animate();
 };
 
