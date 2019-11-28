@@ -28,12 +28,52 @@ class DoublyLinkedList {
 
 		return this;
 	}
+	pop() {
+		if (!this.head) return undefined;
+
+		const oldTail = this.tail;
+
+		if (this.length === 1) {
+			this.head = null;
+			this.tail = null;
+		}
+		/* Course added similar below in single else statement minus decrement */
+
+		this.tail = oldTail.prev;
+
+		if (this.length > 1) {
+			this.tail.next = null;
+			oldTail.prev = null;
+		}
+
+		this.length--;
+
+		return oldTail;
+	}
+	shift() {
+		if (!this.head) return undefined;
+		// somehow I chose the exact var name as instructor
+		const oldHead = this.head;
+
+		if (this.length === 1) {
+			this.head = null;
+			this.tail = null;
+		} else {
+			this.head = oldHead.next;
+			this.head.prev = null;
+			oldHead.next = null;
+		}
+
+		this.length--;
+
+		return oldHead;
+	}
 }
 
 const dList = new DoublyLinkedList();
 
 dList.push(1);
 dList.push(2);
-dList.push('TEST');
-
+dList.push(3);
+dList.push(4);
 console.log(dList);
