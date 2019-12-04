@@ -114,19 +114,80 @@ class DoublyLinkedList {
 
 		return result;
 	}
+	set(index, newValue) {
+		let node = this.get(index);
+		if (!node) return false;
+		node.value = newValue;
+
+		return true;
+	}
+	insert(index, value) {
+		if (index < 0 || index > this.length) return false;
+
+		if (index === 0) return !!this.unshift(value);
+		if (index === this.length) return !!this.push(value);
+
+		const leftLink = this.get(index - 1);
+		const rightLink = this.get(index);
+		const node = new Node(value);
+
+		node.next = leftLink.next;
+		node.prev = rightLink.prev;
+
+		leftLink.next = node;
+		rightLink.prev = node;
+
+		this.length++;
+
+		return true;
+	}
+	remove(index) {
+		if (index < 0 || index >= this.length) return false;
+
+		if (index === 0) return this.shift();
+		if (index === this.length - 1) return this.pop();
+
+		const leftLink = this.get(index - 1);
+		const removedLink = this.get(index);
+		const rightLink = this.get(index + 1);
+
+		leftLink.next = removedLink.next;
+		rightLink.prev = removedLink.prev;
+
+		removedLink.prev = null;
+		removedLink.next = null;
+
+		--this.length;
+
+		return removedLink;
+	}
 }
 
 const dList = new DoublyLinkedList();
 
 dList.push(1);
-dList.push(2);
-dList.push(3);
-dList.push(4);
+// dList.push(2);
+// dList.push(3);
+// dList.push(4);
 
 //console.log(dList);
+dList.insert(0, 15);
+dList.insert(2, 16);
+dList.remove(2);
+dList.remove(1);
+dList.remove(0);
 
-// Working get diff from Course
-console.log(dList.get(0));
-console.log(dList.get(1));
-console.log(dList.get(2));
-console.log(dList.get(3));
+const formArray = () => {
+	let i = 0;
+	const array = [];
+
+	while (i < dList.length) {
+		let catcher = dList.traverse(i, dList.head);
+		array.push(catcher.value);
+		++i;
+	}
+
+	console.log(array);
+};
+
+formArray();
