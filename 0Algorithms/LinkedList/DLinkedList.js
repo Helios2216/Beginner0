@@ -147,6 +147,12 @@ class DoublyLinkedList {
 		if (index === 0) return this.shift();
 		if (index === this.length - 1) return this.pop();
 
+		// Alt -v: get removed link left, right = prev & next
+		/* 
+		const removedLink = this.get(index);
+		const leftLink = removedLink.prev;
+		const rightLink = removedLink.next;
+		*/
 		const leftLink = this.get(index - 1);
 		const removedLink = this.get(index);
 		const rightLink = this.get(index + 1);
