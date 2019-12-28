@@ -10,6 +10,8 @@ class BFS extends Tree {
 		this.result = null;
 	}
 	traverse() {
+		if (!this.root) return null;
+
 		let current;
 
 		if (this.visited.length < 1) {
@@ -55,6 +57,7 @@ class BFS extends Tree {
 		return array;
 	}
 	iTraverse() {
+		if (!this.root) return null;
 		while (true) {
 			let current;
 
@@ -85,6 +88,26 @@ class BFS extends Tree {
 			}
 		}
 	}
+	courseVersion() {
+		// var converted to let
+		if (this.root === null) return [];
+
+		let node = this.root,
+			data = [],
+			queue = [];
+
+		queue.push(node);
+
+		while (queue.length) {
+			node = queue.shift();
+			data.push(node.value);
+
+			if (node.left) queue.push(node.left);
+			if (node.right) queue.push(node.right);
+		}
+
+		return data;
+	}
 }
 
 /* 
@@ -110,3 +133,4 @@ bfs.insert(9);
 let answer = bfs.traverse();
 
 console.log(answer);
+console.log(bfs.courseVersion());
