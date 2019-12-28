@@ -7,6 +7,40 @@ class BFS extends Tree {
 
 		this.visited = queue;
 		this.queue = queue1;
+		this.result = null;
+	}
+	traverse() {
+		let current;
+
+		if (this.visited.length < 1) {
+			this.queue.enqueue(this.root);
+		}
+
+		if (this.queue.length > 0) {
+			current = this.queue.dequeue();
+		}
+
+		if (current.left) {
+			this.queue.enqueue(current.left);
+		}
+		if (current.right) {
+			this.queue.enqueue(current.right);
+		}
+
+		if (current) {
+			this.visited.enqueue(current.value);
+		}
+
+		if (this.queue.length === 0) {
+			//console.log(this.visited, '\n \n');
+			//console.log(this.mapToArray(this.visited), '\n \n');
+
+			return;
+		} else {
+			this.traverse();
+		}
+
+		return this.visited;
 	}
 
 	mapToArray(queue) {
@@ -73,6 +107,6 @@ bfs.insert(9);
 
 //console.log(bfs.traverse())
 
-let answer = bfs.iTraverse();
+let answer = bfs.traverse();
 
 console.log(answer);
