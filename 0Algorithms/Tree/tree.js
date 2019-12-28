@@ -60,6 +60,25 @@ class Tree {
 			}
 		}
 	}
+	courseFind(value) {
+		if (this.root === null) return false;
+		// uses var, converted to let
+		let current = this.root,
+			found = false;
+
+		while (current && !found) {
+			if (value < current.value) {
+				current = current.left;
+			} else if (value > current.value) {
+				current = current.right;
+			} else {
+				found = true;
+			}
+			if (!found) return undefined;
+			// return node || false || undefined; pref
+			return current;
+		}
+	}
 }
 
 const tree = new Tree();
@@ -75,3 +94,11 @@ console.log(tree);
 console.log(tree.insert(1));
 console.log(tree.traverse(1));
 console.log(tree.traverse(100));
+
+/* 
+insertion: O(log n), searching O(log n). 
+Skip a step base on >/< current.value
+note: this is for a binary search tree,
+but it is not guaranteed base on configuration
+i.e don't make bad trees...
+*/
