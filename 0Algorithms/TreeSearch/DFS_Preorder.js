@@ -19,6 +19,7 @@ class DFS extends Tree {
 		if (this.stack.length > 0) {
 			current = this.stack.remove();
 		}
+		// Preorder - flip for post order
 		if (current.right) this.stack.add(current.right);
 		if (current.left) this.stack.add(current.left);
 
@@ -34,6 +35,31 @@ class DFS extends Tree {
 
 		return this.visited;
 	}
+	courseVersion() {
+		let data = [];
+
+		function dTraverse(node) {
+			data.push(node.value);
+			if (node.left) dTraverse(node.left);
+			if (node.right) dTraverse(node.right);
+		}
+
+		dTraverse(this.root);
+
+		return data;
+	}
+	v2Traverse = () => {
+		// Course version remade for Queue
+
+		const qTraverse = (node) => {
+			this.visited.enqueue(node.value);
+
+			if (node.left) qTraverse(node.left);
+			if (node.right) qTraverse(node.right);
+		};
+		qTraverse(this.root);
+		return this.mapToArray(this.visited);
+	};
 	mapToArray(queue) {
 		const array = [];
 		let temp;
@@ -67,6 +93,11 @@ dfs.insert(8);
 dfs.insert(3);
 dfs.insert(20);
 
-dfs.traverse();
+//dfs.traverse();  // pair w/ clg dfs.mapetc(dfs.visited)
+//console.log(dfs.mapToArray(dfs.visited));
 
-console.log(dfs.mapToArray(dfs.visited));
+// v2 working
+console.log(dfs.v2Traverse());
+
+// course version
+//console.log(dfs.courseVersion());
