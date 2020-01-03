@@ -120,13 +120,20 @@ let queue = new Queue();
 let visited = new Queue();
 const bfs = new BFS(visited, queue);
 
-bfs.insert(5);
-bfs.insert(3);
-bfs.insert(7);
-bfs.insert(2);
-bfs.insert(4);
+// bfs.insert(5);
+// bfs.insert(3);
+// bfs.insert(7);
+// bfs.insert(2);
+// bfs.insert(4);
+// bfs.insert(6);
+// bfs.insert(9);
+
+bfs.insert(10);
 bfs.insert(6);
-bfs.insert(9);
+bfs.insert(15);
+bfs.insert(8);
+bfs.insert(3);
+bfs.insert(20);
 
 //console.log(bfs.traverse())
 
