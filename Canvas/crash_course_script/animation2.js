@@ -37,7 +37,7 @@ class Player {
 			this.keydown(e);
 			this.listen(e);
 		});
-		document.addEventListener('keydown', (e) => {
+		document.addEventListener('keyup', (e) => {
 			this.keyUp(e);
 		});
 	}
@@ -68,9 +68,13 @@ class Player {
 	};
 
 	drawPlayer = () => {
+		/* 
+		This fixed the bugginess, by calling player position before drawing. Now the correct x and y are set.
+		*/
+		this.playerPosition();
 		// new: drawImage(image, loc.x, loc.y, width, height)
 		ctx.drawImage(image, this.x, this.y, this.width, this.height);
-		this.playerPosition();
+
 		console.log(this.x);
 	};
 	update = (e) => {
@@ -139,9 +143,12 @@ const clear = () => {
 
 let count = 0;
 const animate = () => {
+	// Initial draw
+	if (count < 1) {
+		player.drawPlayer();
+	}
 	count++;
 	if (count > 410) return;
-	player.drawPlayer();
 
 	if (player.listen()) {
 		requestAnimationFrame(animate);
