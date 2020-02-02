@@ -1,0 +1,47 @@
+.grid-nav {
+	display: grid;
+	grid-template-areas: "brand  nav";
+	height: 10vh;
+}
+
+.grid-list-2 {
+	grid-area: nav;
+	display: grid;
+	grid-template-areas: 'Menu Contacts';
+	list-style: none;
+	align-items: center;
+	justify-items: center;
+}
+.brand {
+	justify-self: center;
+	align-self: center;
+	grid-area: brand;
+}
+
+.landing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 40vh;
+}
+
+.my-5 {
+	margin: 14px 0;
+}
+
+.grid-2y {
+	display: grid;
+	grid-template-areas: 'section1' 'section2';
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.main {
+	height: 40vh;
+}
+.footer {
+	height: 10vh;
+}
